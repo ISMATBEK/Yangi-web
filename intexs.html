@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ismatbek — Cybersecurity Specialist</title>
+  <meta name="description" content="Traffic monitoring, network scanning, pentesting, Telegram bots, and custom Python automation. EN/RU/UZ." />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Ismatbek — Cybersecurity Specialist" />
+  <meta property="og:description" content="Traffic monitoring, network scanning, pentesting, Telegram bots, and custom Python automation." />
+  <meta name="theme-color" content="#0ea5e9" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b0c10; --card:#111218; --muted:#8b93a1; --text:#eef2f7; --primary:#0ea5e9; --ring:#22d3ee; --shadow:0 10px 30px rgba(2,8,23,.35);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;background:linear-gradient(180deg,#0b0c10 0%,#0d1016 100%);color:var(--text)}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1100px;margin:0 auto;padding:0 20px}
+    header{position:sticky;top:0;backdrop-filter:saturate(160%) blur(10px);background:rgba(11,12,16,.5);border-bottom:1px solid rgba(255,255,255,.06);z-index:50}
+    .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+    .brand{display:flex;gap:10px;align-items:center;font-weight:700}
+    .brand svg{width:22px;height:22px;flex:0 0 22px}
+    .nav-links{display:flex;gap:18px;align-items:center}
+    .nav-links a{opacity:.85;font-size:14px}
+    .lang{display:flex;gap:8px}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:14px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);color:var(--text);cursor:pointer;transition:.2s;box-shadow:none}
+    .btn:hover{transform:translateY(-1px);box-shadow:var(--shadow)}
+    .btn.primary{background:linear-gradient(135deg,var(--primary),var(--ring));border-color:transparent;color:#06141f;font-weight:700}
+    .btn.ghost{background:transparent}
+    .pill{padding:4px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.1);font-size:12px;opacity:.8}
+
+    section{padding:72px 0}
+    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center}
+    .hero h1{font-size:44px;line-height:1.05;margin:0;font-weight:800}
+    .hero p{opacity:.88}
+    .muted{color:var(--muted)}
+    .tagline{font-style:italic;font-size:14px;margin-top:8px;color:#b9c3cf}
+    .cta{display:flex;gap:12px;margin-top:22px;flex-wrap:wrap}
+    .dash{aspect-ratio:4/3;background:radial-gradient(1200px 600px at -10% -10%, rgba(34,211,238,.35), transparent 50%),linear-gradient(180deg,#0c1220,#0b0c10);border:1px solid rgba(255,255,255,.08);border-radius:20px;display:grid;place-items:center;box-shadow:var(--shadow)}
+    .dash svg{width:96px;height:96px;opacity:.9}
+
+    h2{font-size:28px;margin:0 0 18px;font-weight:800}
+    .grid{display:grid;gap:18px}
+    .grid.cards{grid-template-columns:repeat(3,1fr)}
+    .card{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:18px}
+    .card h3{margin:0 0 6px}
+    .card .desc{opacity:.85;font-size:14px}
+    .list{display:flex;flex-direction:column;gap:10px}
+    .list .row{display:flex;gap:10px;align-items:flex-start}
+    .badge{background:rgba(34,211,238,.12);border:1px solid rgba(34,211,238,.4);font-size:12px;padding:4px 8px;border-radius:10px}
+
+    .portfolio .thumb{aspect-ratio:16/9;border-radius:12px;background:linear-gradient(135deg,rgba(34,211,238,.2),rgba(14,165,233,.15));border:1px solid rgba(255,255,255,.08);display:grid;place-items:center;margin-bottom:10px}
+    .portfolio .thumb svg{width:42px;height:42px}
+    .portfolio .meta{display:flex;justify-content:space-between;align-items:center}
+    .tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
+    .tag{font-size:12px;border:1px solid rgba(255,255,255,.12);padding:3px 8px;border-radius:999px;opacity:.85}
+
+    footer{border-top:1px solid rgba(255,255,255,.08)}
+
+    @media (max-width: 900px){
+      .hero{grid-template-columns:1fr}
+      .grid.cards{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width: 640px){
+      .grid.cards{grid-template-columns:1fr}
+      .hero h1{font-size:34px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l7 4v6c0 5-3.5 8-7 10-3.5-2-7-5-7-10V6l7-4z"/><path d="M9 12l3 3 5-5"/></svg>
+        <span id="brandName">Ismatbek</span>
+      </div>
+      <nav class="nav-links">
+        <a href="#home" data-i18n="nav.home">Bosh sahifa</a>
+        <a href="#about" data-i18n="nav.about">Men haqimda</a>
+        <a href="#services" data-i18n="nav.services">Xizmatlar</a>
+        <a href="#portfolio" data-i18n="nav.portfolio">Portfolio</a>
+        <a href="#contact" data-i18n="nav.contact">Bog'lanish</a>
+        <div class="lang">
+          <button class="pill" data-lang="uz">UZ</button>
+          <button class="pill" data-lang="ru">RU</button>
+          <button class="pill" data-lang="en">EN</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="home">
+      <div class="container hero">
+        <div>
+          <div class="pill" data-i18n="hero.badge">Cybersecurity · Python</div>
+          <h1 data-i18n="hero.title">Kiberxavfsizlik mutaxassisi</h1>
+          <p class="muted" data-i18n="hero.subtitle">Trafik monitoring · Tarmoq skaneri · Pentest · Telegram botlar · Python avtomatlashtirish</p>
+          <div class="tagline" data-i18n="hero.tagline">Hakerona qiziqish va himoyachi refleksiga ega qo'lidan keladigan yaratuvchi.</div>
+          <div class="cta">
+            <a id="waHero" class="btn primary">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 2a10 10 0 00-8.94 14.56L2 22l5.6-1.05A10 10 0 1012 2zm5.2 14.2c-.2.6-1.1 1.1-1.6 1.1-.4 0-.9.1-3.1-1-2.6-1.2-4.2-3.8-4.3-4-.1-.3-1-1.4-1-2.6 0-1.1.6-1.7.8-1.9.2-.2.4-.3.6-.3h.5c.2 0 .4 0 .5.4.2.5.7 1.7.8 1.8.1.2.1.3 0 .5-.1.2-.2.3-.3.5-.2.2-.3.3-.4.5-.2.2-.3.4-.1.7.2.3.9 1.5 2 2.4 1.4 1 2.5 1.3 2.8 1.5.3.1.6.1.8-.1l.6-.7c.2-.2.4-.2.6-.1.2.1 1.6.8 1.8.9.2.1.4.2.5.3.1.3.1.6 0 .9z"/></svg>
+              <span data-i18n="hero.ctaPrimary">WhatsApp orqali yozing</span>
+            </a>
+            <a href="#services" class="btn ghost" data-i18n="hero.ctaSecondary">Xizmatlarni ko'rish</a>
+          </div>
+        </div>
+        <div class="dash">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M12 3l8 4v5c0 4.5-3 7.5-8 10C7 19.5 4 16.5 4 12V7l8-4z"/>
+            <path d="M8 12l3 3 5-5"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="container">
+        <h2 data-i18n="about.heading">Men haqimda</h2>
+        <div class="grid" style="grid-template-columns:2fr 1fr;gap:18px">
+          <div class="card">
+            <p class="desc" data-i18n="about.body">Ismatbek — amaliy kiberxavfsizlik bilan shug'ullanuvchi mutaxassis. Tarmoq trafikini kuzatadi, skanerlar yaratadi, pentest o'tkazadi va xavfsiz Telegram botlar ishlab chiqadi. Shuningdek, foydali maslahatlar beradi va tizimlarni mustahkamlash uchun buyurtma asosida Python skriptlar yozadi.</p>
+          </div>
+          <div class="card">
+            <h3 style="margin-bottom:10px">Key Points</h3>
+            <div id="aboutList" class="list"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services">
+      <div class="container">
+        <h2 data-i18n="services.heading">Xizmatlar</h2>
+        <div id="servicesGrid" class="grid cards"></div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section id="portfolio" class="portfolio">
+      <div class="container">
+        <div style="display:flex;justify-content:space-between;align-items:end;gap:16px;margin-bottom:8px">
+          <h2 data-i18n="portfolio.heading">Portfolio</h2>
+          <span class="muted" style="font-size:12px" data-i18n="portfolio.note">Namuna loyihalar — o'zingiznikiga almashtiring.</span>
+        </div>
+        <div id="portfolioGrid" class="grid cards"></div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="container">
+        <h2 data-i18n="contact.heading">Bog'lanish</h2>
+        <p class="muted" data-i18n="contact.sub">Eng tezkor yo'l — WhatsApp</p>
+        <div class="grid" style="grid-template-columns:2fr 1fr;gap:18px">
+          <div class="card" style="display:flex;gap:12px;flex-wrap:wrap">
+            <a id="waContact" class="btn primary" data-i18n-attr="text:contact.whatsapp">WhatsApp orqali yozish</a>
+            <a id="emailLink" class="btn" href="qannahorovismatbek@gmail.com" data-i18n="contact.email">Email jo'natish</a>
+            <a class="btn ghost" href="https://t.me/@timenevs" target="_blank" rel="noreferrer">Telegram</a>
+          </div>
+          <div class="card">
+            <h3 style="margin-bottom:10px" data-i18n="contact.socials">Ijtimoiy tarmoqlar</h3>
+            <div class="list">
+              <a class="row" href="#" target="_blank" rel="noreferrer">GitHub ></a>
+              <a class="row" href="#" target="_blank" rel="noreferrer">LinkedIn ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <section class="container" style="padding:24px 0;text-align:center">
+      <div id="copyright" class="muted">© <span id="year"></span> Ismatbek. All rights reserved.</div>
+    </section>
+  </footer>
+
+  <script>
+    // ============= CONFIG =============
+    const NAME = 'Ismatbek Kannakhorov';
+    const WHATSAPP_NUMBER = '+998931280230'; // TODO: < raqamingizni xalqaro formatda kiriting (masalan, 99890******* )
+
+    // ============= TRANSLATIONS =============
+    const t = {
+      en: {
+        nav: { home: 'Home', about: 'About', services: 'Services', portfolio: 'Portfolio', contact: 'Contact' },
+        hero: {
+          badge: 'Cybersecurity · Python',
+          title: 'Cybersecurity Specialist',
+          subtitle: 'Traffic monitoring · Network scanning · Pentesting · Telegram bots · Python automation',
+          tagline: "Hands-on creator with a hacker's curiosity & a guardian's reflex.",
+          ctaPrimary: 'Hire me on WhatsApp',
+          ctaSecondary: 'View services'
+        },
+        about: {
+          heading: 'About Me',
+          body: `${NAME} — a cybersecurity practitioner focused on proactive defense and practical tooling. I monitor network traffic, build scanners, perform penetration testing, and create secure Telegram bots. I also deliver actionable security advice and develop custom Python scripts to automate workflows and harden systems.`,
+          highlights: [
+            'Traffic analysis & anomaly detection',
+            'Network scanning & asset discovery',
+            'Web/app pentesting practice',
+            'Secure-by-design Telegram bots',
+            'Custom Python tooling & automation'
+          ]
+        },
+        services: {
+          heading: 'Services',
+          list: [
+            { title: 'Pentesting', desc: 'Web/app assessments with clear, prioritized remediation steps.' },
+            { title: 'Traffic Monitoring', desc: 'Packet capture, flow analytics, alerts, and reporting.' },
+            { title: 'Network Scanning', desc: 'Asset discovery, fingerprinting, exposure mapping.' },
+            { title: 'Telegram Bots', desc: 'Secure bots for alerts, workflows, and integrations.' },
+            { title: 'Python Scripts', desc: 'Custom automation and tooling tailored to your environment.' },
+            { title: 'Consulting', desc: 'Practical cybersecurity guidance and best practices.' }
+          ]
+        },
+        portfolio: {
+          heading: 'Portfolio',
+          note: 'Selected examples — replace with your real work.',
+          items: [
+            { title: 'Traffic Monitor Dashboard', tags: ['pcap','ELK','alerts'], link: '#' },
+            { title: 'Network Scanner CLI', tags: ['nmap','python'], link: '#' },
+            { title: 'Pentest Playbook', tags: ['web','reporting'], link: '#' },
+            { title: 'Telegram SOC Bot', tags: ['bot','SIEM'], link: '#' }
+          ]
+        },
+        contact: {
+          heading: 'Contact', sub: 'Fastest way: WhatsApp',
+          whatsapp: 'Message on WhatsApp', email: 'Email me', socials: 'Socials'
+        },
+        footer: { rights: `© ${new Date().getFullYear()} ${NAME}. All rights reserved.` }
+      },
+      ru: {
+        nav: { home: 'Главная', about: 'Обо мне', services: 'Услуги', portfolio: 'Портфолио', contact: 'Контакты' },
+        hero: {
+          badge: 'Кибербезопасность · Python',
+          title: 'Специалист по кибербезопасности',
+          subtitle: 'Мониторинг трафика · Сканирование сети · Пентестинг · Телеграм-боты · Python-автоматизация',
+          tagline: 'Практик с любопытством хакера и рефлексами защитника.',
+          ctaPrimary: 'Написать в WhatsApp',
+          ctaSecondary: 'Мои услуги'
+        },
+        about: {
+          heading: 'Обо мне',
+          body: `${NAME} — практик кибербезопасности, ориентированный на проактивную защиту и прикладные инструменты. Мониторю сетевой трафик, создаю сканеры, провожу пентесты и разрабатываю безопасные Telegram-боты. Даю прикладные рекомендации и пишу кастомные Python-скрипты.`,
+          highlights: [
+            'Аналитика трафика и поиск аномалий',
+            'Сканирование сети и инвентаризация',
+            'Практика веб/апп пентестинга',
+            'Безопасные Telegram-боты',
+            'Кастомные инструменты на Python'
+          ]
+        },
+        services: {
+          heading: 'Услуги',
+          list: [
+            { title: 'Пентест', desc: 'Аудит веб/приложений с приоритизацией исправлений.' },
+            { title: 'Мониторинг трафика', desc: 'Захват пакетов, анализ потоков, алерты и отчёты.' },
+            { title: 'Сканирование сети', desc: 'Поиск активов, фингерпринтинг, карта экспозиций.' },
+            { title: 'Telegram-боты', desc: 'Безопасные боты для оповещений и интеграций.' },
+            { title: 'Скрипты на Python', desc: 'Автоматизация и инструменты под ваши задачи.' },
+            { title: 'Консалтинг', desc: 'Прикладные советы и практики кибербезопасности.' }
+          ]
+        },
+        portfolio: {
+          heading: 'Портфолио', note: 'Примеры — замените на реальные проекты.',
+          items: [
+            { title: 'Панель мониторинга трафика', tags: ['pcap','ELK','alerts'], link: '#' },
+            { title: 'CLI-сканер сети', tags: ['nmap','python'], link: '#' },
+            { title: 'Плейбук пентеста', tags: ['web','report'], link: '#' },
+            { title: 'SOC-бот в Telegram', tags: ['bot','SIEM'], link: '#' }
+          ]
+        },
+        contact: { heading: 'Контакты', sub: 'Быстрее всего — WhatsApp', whatsapp: 'Написать в WhatsApp', email: 'Написать на email', socials: 'Соцсети' },
+        footer: { rights: `© ${new Date().getFullYear()} ${NAME}. Все права защищены.` }
+      },
+      uz: {
+        nav: { home: "Bosh sahifa", about: "Men haqimda", services: "Xizmatlar", portfolio: "Portfolio", contact: "Bog'lanish" },
+        hero: {
+          badge: 'Kiberxavfsizlik · Python',
+          title: 'Kiberxavfsizlik mutaxassisi',
+          subtitle: "Trafik monitoring · Tarmoq skaneri · Pentest · Telegram botlar · Python avtomatlashtirish",
+          tagline: "Hakerona qiziqish va himoyachi refleksiga ega qo'lidan keladigan yaratuvchi.",
+          ctaPrimary: 'WhatsApp orqali yozing',
+          ctaSecondary: "Xizmatlarni ko'rish"
+        },
+        about: {
+          heading: 'Men haqimda',
+          body: `${NAME} — amaliy kiberxavfsizlik bilan shug'ullanuvchi mutaxassis. Tarmoq trafikini kuzatadi, skanerlar yaratadi, pentest o'tkazadi va xavfsiz Telegram botlar ishlab chiqadi. Shuningdek, foydali maslahatlar beradi va tizimlarni mustahkamlash uchun buyurtma asosida Python skriptlar yozadi.",
+          highlights: [
+            'Trafik tahlili va anomaliyalarni aniqlash',
+            'Tarmoq skaneri va aktivlarni aniqlash',
+            'Veb/ilova pentesti amaliyoti',
+            'Xavfsiz Telegram botlar',
+            'Buyurtma asosida Python avtomatlashtirish'
+          ]
+        },
+        services: {
+          heading: 'Xizmatlar',
+          list: [
+            { title: 'Pentest', desc: 'Veb/ilovalar auditi, ustuvor yechimlar bilan hisobot.' },
+            { title: 'Trafik monitoring', desc: 'Paketlarni ushlash, oqim tahlili, ogohlantirish va hisobot.' },
+            { title: 'Tarmoq skaneri', desc: 'Aktivlarni topish, barmoq izlash, xavf xaritasi.' },
+            { title: 'Telegram botlar', desc: 'Ogohlantirish va jarayonlar uchun xavfsiz botlar.' },
+            { title: 'Python skriptlar', desc: 'Muhitga moslashtirilgan avtomatlashtirish va vositalar.' },
+            { title: 'Maslahat', desc: "Amaliy kiberxavfsizlik bo'yicha yo'l-yo'riqlar." }
+          ]
+        },
+        portfolio: {
+          heading: 'Portfolio', note: "Namuna loyihalar — o'zingiznikiga almashtiring.",
+          items: [
+            { title: 'Trafik nazorat paneli', tags: ['pcap','ELK','ogohlantirish'], link: '#' },
+            { title: 'Tarmoq skaneri CLI', tags: ['nmap','python'], link: '#' },
+            { title: "Pentest qo'llanma", tags: ['web','hisobot'], link: '#' },
+            { title: 'Telegram SOC bot', tags: ['bot','SIEM'], link: '#' }
+          ]
+        },
+        contact: { heading: "Bog'lanish", sub: "Eng tezkor yo'l — WhatsApp", whatsapp: 'WhatsApp orqali yozish', email: "Email jo'natish", socials: 'Ijtimoiy tarmoqlar' },
+        footer: { rights: `© ${new Date().getFullYear()} ${NAME}. Barcha huquqlar himoyalangan.` }
+      }
+    };
+
+    // ============= RENDER =============
+    const langBtns = document.querySelectorAll('[data-lang]');
+    const yearEl = document.getElementById('year');
+    const brandName = document.getElementById('brandName');
+    yearEl.textContent = new Date().getFullYear();
+    brandName.textContent = NAME;
+
+    function buildWhatsAppUrl(text){
+      const msg = encodeURIComponent(text);
+      return `https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`;
+    }
+
+    function setLang(l){
+      const tr = t[l];
+      localStorage.setItem('site-lang', l);
+      document.documentElement.lang = l;
+      // Basic text replacements
+      document.querySelectorAll('[data-i18n]').forEach(el=>{
+        const path = el.getAttribute('data-i18n');
+        const value = path.split('.').reduce((acc,k)=>acc?.[k], tr);
+        if(typeof value === 'string') el.textContent = value;
+      });
+      // About list
+      const aboutList = document.getElementById('aboutList');
+      aboutList.innerHTML = '';
+      tr.about.highlights.forEach((item,i)=>{
+        const row = document.createElement('div');
+        row.className = 'row';
+        row.innerHTML = `<span class="badge">${i+1}</span><span class="muted">${item}</span>`;
+        aboutList.appendChild(row);
+      });
+      // Services cards
+      const sGrid = document.getElementById('servicesGrid');
+      sGrid.innerHTML = '';
+      tr.services.list.forEach(s=>{
+        const card = document.createElement('div');
+        card.className = 'card';
+        card.innerHTML = `<h3>${s.title}</h3><div class='desc'>${s.desc}</div>`;
+        sGrid.appendChild(card);
+      });
+      // Portfolio
+      const pGrid = document.getElementById('portfolioGrid');
+      pGrid.innerHTML = '';
+      tr.portfolio.items.forEach(p=>{
+        const card = document.createElement('div');
+        card.className = 'card';
+        card.innerHTML = `
+          <div class='thumb'>
+            <svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.4'><path d='M4 7h16v10H4z'/><path d='M4 13l4-3 4 3 4-2 4 2'/></svg>
+          </div>
+          <div class='meta'>
+            <div>
+              <div style='font-weight:600'>${p.title}</div>
+              <div class='tags'>${p.tags.map(x=>`<span class='tag'>${x}</span>`).join('')}</div>
+            </div>
+            <a href='${p.link}' target='_blank' rel='noreferrer'>?</a>
+          </div>`;
+        pGrid.appendChild(card);
+      });
+      // Buttons text that are attributes
+      const waHero = document.getElementById('waHero');
+      const waContact = document.getElementById('waContact');
+      const emailLink = document.getElementById('emailLink');
+      waHero.setAttribute('href', buildWhatsAppUrl('Salom! Men siz bilan ishlashni xohlayman.'));
+      waContact.setAttribute('href', buildWhatsAppUrl("Salom! Kiberxavfsizlik xizmati bo'yicha murojaat."));
+      // Labels
+      waHero.querySelector('span').textContent = tr.hero.ctaPrimary;
+      emailLink.textContent = tr.contact.email;
+    }
+
+    langBtns.forEach(btn=>btn.addEventListener('click',()=> setLang(btn.dataset.lang)));
+    const stored = localStorage.getItem('site-lang') || 'uz';
+    setLang(stored);
+  </script>
+</body>
+</html>
